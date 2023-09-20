@@ -2,37 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ASCII Art Web</title>
 </head>
-<body>
-    <body style="background-color: #888888">
-    
-    <form>
+<body style="background-color: #888888">
+    <form action="/ascii-art" method="POST">
         <fieldset>
             <legend>ASCII-art-web</legend>
 
             <div>
                 <label>Banner</label>
             </div>
-                <div>
-                    <input list="banner-list" type="text">
-                    <datalist id="banner-list">
-                        <option value="standard">
-                        <option value="shadow">
-                        <option value="thinkertoy">
-                        </option>
-                    </datalist>
-                </div>
+            <div>
+                <!-- <input name="banner" list="banner-list" type="text">
+                <datalist id="banner-list">
+                    <option value="standard">
+                    <option value="shadow">
+                    <option value="thinkertoy">
+                </datalist> -->
+                <input type="checkbox" name="banner" value="standard">
+                <input type="checkbox" name="banner" value="shadow">
+                <input type="checkbox" name="banner" value="thinkertoy">
+            </div>
 
-                <div>
-                    <label>Input text</label>
-                </div>
-
-                <div>
-                    <input type="text">
-                </div>
+            <div>
+                <label>Input text</label>
+            </div>
+            <div>
+                <input id="add-text" name="text" type="text">
+            </div>
         </fieldset>
+        <input type="submit" value="Generate">
     </form>
+    <p>{{.}}</p>
 </body>
 </html>
